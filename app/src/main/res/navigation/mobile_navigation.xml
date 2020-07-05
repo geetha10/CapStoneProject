@@ -9,17 +9,45 @@
         android:id="@+id/navigation_home"
         android:name="com.geetha.capstoneproject.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_pantry"
+            app:destination="@id/navigation_pantry" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_pantry"
         android:name="com.geetha.capstoneproject.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_pantry"
+        tools:layout="@layout/fragment_pantry" >
+        <action
+            android:id="@+id/action_navigation_pantry_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_search"
         android:name="com.geetha.capstoneproject.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_shopping_list"
+            app:destination="@id/navigation_shopping_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_shopping_list"
+        android:name="com.geetha.capstoneproject.ui.dashboard.DashboardFragment"
+        android:label="@string/title_shopping_list"
+        tools:layout="@layout/fragment_shopping_list" >
+        <action
+            android:id="@+id/action_navigation_shopping_list_to_navigation_calendar"
+            app:destination="@id/navigation_calendar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="com.geetha.capstoneproject.ui.dashboard.DashboardFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
 </navigation>
