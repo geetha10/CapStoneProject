@@ -11,5 +11,6 @@
     <string name="menuItem_collaborator">Add Person</string>
     <string name="menuItem_share">Share</string>
     <string name="menuItem_calendar">Month</string>
+    <string name="menuItem_favorite">Favorite</string>
 
 </resources>

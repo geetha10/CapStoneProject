@@ -6,95 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <LinearLayout
-        android:id="@+id/welcome_note_ll"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:menu="@menu/fragment_home_menu"
+        app:title="App Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome User"
-            android:textSize="@dimen/font_size_heading" />
-    </LinearLayout>
+     <LinearLayout
+         android:id="@+id/welcome_note_ll"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin"
+         android:orientation="horizontal"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Welcome User"
+             android:textSize="@dimen/font_size_heading" />
+     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/selected_recipes_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
-        android:text="Selected Recipes"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/font_size_heading"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_note_ll" />
+     <TextView
+         android:id="@+id/selected_recipes_tv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin"
+         android:text="Selected Recipes"
+         android:textStyle="bold"
+         android:textColor="@android:color/black"
+         android:textSize="@dimen/font_size_heading"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/welcome_note_ll" />
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:drawableEnd="@drawable/ic_baseline_arrow_right"
-        android:gravity="start|center"
-        android:text="@string/see_all"
-        android:textAllCaps="false"
-        android:layout_margin="@dimen/margin"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/selected_recipes_tv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/selected_recipes_tv" />
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="?attr/selectableItemBackground"
+         android:drawableEnd="@drawable/ic_baseline_arrow_right"
+         android:gravity="start|center"
+         android:text="@string/see_all"
+         android:textAllCaps="false"
+         android:layout_margin="@dimen/margin"
+         android:padding="8dp"
+         app:layout_constraintBottom_toBottomOf="@+id/selected_recipes_tv"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/selected_recipes_tv" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recipes_rv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selected_recipes_tv"
-        app:layout_constraintVertical_bias="1.0"
-        tools:listitem="@layout/item_recipe" />
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/recipes_rv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/selected_recipes_tv"
+         app:layout_constraintVertical_bias="1.0"
+         tools:listitem="@layout/item_recipe" />
 
-    <TextView
-        android:id="@+id/fav_recipes_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
-        android:text="Favorites"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/font_size_heading"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipes_rv" />
+     <TextView
+         android:id="@+id/fav_recipes_tv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin"
+         android:text="Favorites"
+         android:textStyle="bold"
+         android:textColor="@android:color/black"
+         android:textSize="@dimen/font_size_heading"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/recipes_rv" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
-        android:background="?attr/selectableItemBackground"
-        android:drawableEnd="@drawable/ic_baseline_arrow_right"
-        android:gravity="start|center"
-        android:padding="8dp"
-        android:text="@string/see_all"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@+id/fav_recipes_tv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fav_recipes_tv" />
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin"
+         android:background="?attr/selectableItemBackground"
+         android:drawableEnd="@drawable/ic_baseline_arrow_right"
+         android:gravity="start|center"
+         android:padding="8dp"
+         android:text="@string/see_all"
+         android:textAllCaps="false"
+         app:layout_constraintBottom_toBottomOf="@+id/fav_recipes_tv"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/fav_recipes_tv" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fav_recipes_rv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fav_recipes_tv"
-        tools:listitem="@layout/item_fav_recipe" />
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/fav_recipes_rv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/fav_recipes_tv"
+         tools:listitem="@layout/item_fav_recipe" />
 </androidx.constraintlayout.widget.ConstraintLayout>

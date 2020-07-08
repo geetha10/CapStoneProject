@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/menuItem_collaborator"
         android:icon="@drawable/ic_add_person"
-        android:title="@string/menuItem_collaborator" />
+        android:title="@string/menuItem_collaborator"
+        app:showAsAction="ifRoom"/>
+
 
     <item
         android:id="@+id/menuItem_share"
         android:icon="@drawable/ic_share"
-        android:title="@string/menuItem_share" />
+        android:title="@string/menuItem_share"
+        app:showAsAction="ifRoom" />
 </menu>
