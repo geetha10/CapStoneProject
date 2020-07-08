@@ -15,7 +15,7 @@
         app:menu="@menu/fragment_home_menu"
         app:title="App Name"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_arrow_back"/>
+        />
 
      <LinearLayout
          android:id="@+id/welcome_note_ll"
