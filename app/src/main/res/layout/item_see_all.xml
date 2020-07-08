@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/recipe_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/paneer_tikka" />
+
+        <TextView
+            android:id="@+id/recipe_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/font_size_heading"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/recipe_iv"
+            app:layout_constraintTop_toTopOf="@+id/recipe_iv"
+            tools:text="@tools:sample/lorem[1]" />
+
+        <TextView
+            android:id="@+id/recipe_cusine_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:drawableLeft="@drawable/ic_baseline_cusine"
+            android:text="Indian"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/recipe_iv"
+            app:layout_constraintStart_toEndOf="@+id/recipe_iv"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_name_tv" />
+
+        <TextView
+            android:id="@+id/recipe_prepTime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:drawableLeft="@drawable/ic_prep_time"
+            android:text="45 mins"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/recipe_iv"
+            app:layout_constraintStart_toEndOf="@+id/recipe_cusine_tv"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_name_tv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

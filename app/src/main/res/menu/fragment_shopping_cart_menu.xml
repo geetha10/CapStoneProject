@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItem_collaborator"
+        android:icon="@drawable/ic_add_person"
+        android:title="@string/menuItem_collaborator" />
+
+    <item
+        android:id="@+id/menuItem_share"
+        android:icon="@drawable/ic_share"
+        android:title="@string/menuItem_share" />
+</menu>

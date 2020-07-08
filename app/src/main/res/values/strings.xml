@@ -6,5 +6,10 @@
     <string name="title_shopping_list">Shopping List</string>
     <string name="title_calendar">Calendar</string>
     <string name="see_all">See all</string>
+    <string name="menuItem_home">Home</string>
+    <string name="menuItem_search">Search</string>
+    <string name="menuItem_collaborator">Add Person</string>
+    <string name="menuItem_share">Share</string>
+    <string name="menuItem_calendar">Month</string>
 
 </resources>
