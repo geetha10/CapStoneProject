@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/recipe_iv"
+            android:id="@+id/cuisine_iv"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitXY"
@@ -31,8 +31,8 @@
             android:layout_margin="@dimen/margin"
             android:textSize="@dimen/font_size_heading"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/recipe_iv"
-            app:layout_constraintTop_toTopOf="@+id/recipe_iv"
+            app:layout_constraintStart_toEndOf="@+id/cuisine_iv"
+            app:layout_constraintTop_toTopOf="@+id/cuisine_iv"
             tools:text="@tools:sample/lorem[1]" />
 
         <TextView
@@ -43,8 +43,8 @@
             android:drawableLeft="@drawable/ic_baseline_cusine"
             android:text="Indian"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/recipe_iv"
-            app:layout_constraintStart_toEndOf="@+id/recipe_iv"
+            app:layout_constraintBottom_toBottomOf="@+id/cuisine_iv"
+            app:layout_constraintStart_toEndOf="@+id/cuisine_iv"
             app:layout_constraintTop_toBottomOf="@+id/recipe_name_tv" />
 
         <TextView
@@ -55,7 +55,7 @@
             android:drawableLeft="@drawable/ic_prep_time"
             android:text="45 mins"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/recipe_iv"
+            app:layout_constraintBottom_toBottomOf="@+id/cuisine_iv"
             app:layout_constraintStart_toEndOf="@+id/recipe_cusine_tv"
             app:layout_constraintTop_toBottomOf="@+id/recipe_name_tv" />
 

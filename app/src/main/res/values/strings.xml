@@ -12,5 +12,6 @@
     <string name="menuItem_share">Share</string>
     <string name="menuItem_calendar">Month</string>
     <string name="menuItem_favorite">Favorite</string>
+    <string name="menuItem_delete">Delete</string>
 
 </resources>
