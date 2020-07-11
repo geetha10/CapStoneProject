@@ -7,7 +7,7 @@
     tools:context=".ui.home.HomeFragment">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,9 +16,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/fragment_home_menu"
         app:title="App Name"
-        app:layout_constraintTop_toTopOf="parent"
         />
 
      <androidx.recyclerview.widget.RecyclerView
@@ -29,23 +29,21 @@
          android:orientation="horizontal"
          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
          app:layout_constraintEnd_toEndOf="parent"
-         tools:listitem="@layout/item_cuisine"
          app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/toolbar">
+         app:layout_constraintTop_toBottomOf="@+id/toolbar"
+         tools:listitem="@layout/item_cuisine">
 
 
      </androidx.recyclerview.widget.RecyclerView>
-
-
-     <TextView
+ <TextView
          android:id="@+id/selected_recipes_tv"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_margin="@dimen/margin"
-         android:text="Selected Recipes"
-         android:textStyle="bold"
+         android:text="@string/selected_recipes"
          android:textColor="@android:color/black"
          android:textSize="@dimen/font_size_heading"
+         android:textStyle="bold"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toBottomOf="@+id/welcome_note_ll" />
 
@@ -53,13 +51,13 @@
      <Button
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin"
          android:background="?attr/selectableItemBackground"
          android:drawableEnd="@drawable/ic_baseline_arrow_right"
          android:gravity="start|center"
+         android:padding="8dp"
          android:text="@string/see_all"
          android:textAllCaps="false"
-         android:layout_margin="@dimen/margin"
-         android:padding="8dp"
          app:layout_constraintBottom_toBottomOf="@+id/selected_recipes_tv"
          app:layout_constraintEnd_toEndOf="parent"
          app:layout_constraintTop_toTopOf="@+id/selected_recipes_tv" />
@@ -80,10 +78,10 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_margin="@dimen/margin"
-         android:text="Favorites"
-         android:textStyle="bold"
+         android:text="@string/favorites"
          android:textColor="@android:color/black"
          android:textSize="@dimen/font_size_heading"
+         android:textStyle="bold"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toBottomOf="@+id/recipes_rv" />
 

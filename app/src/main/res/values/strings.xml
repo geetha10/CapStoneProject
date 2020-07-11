@@ -13,5 +13,7 @@
     <string name="menuItem_calendar">Month</string>
     <string name="menuItem_favorite">Favorite</string>
     <string name="menuItem_delete">Delete</string>
+    <string name="favorites">Favorites</string>
+    <string name="selected_recipes">Selected Recipes</string>
 
 </resources>

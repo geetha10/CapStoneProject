@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_margin="@dimen/margin"
+        android:src="@drawable/biryani"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"/>
@@ -39,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recipe_image"
-        tools:text="@tools:sample/lorem[2]" />
+        tools:text="Biryani" />
 
     <TextView
         android:id="@+id/prepTime_tv"
@@ -50,7 +51,7 @@
         android:drawablePadding="@dimen/margin"
         android:gravity="center"
         android:textAlignment="center"
-        android:text="mins"
+        android:text="45 mins"
         android:textSize="12dp"
         android:paddingRight="8dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,9 +139,13 @@
         android:layout_margin="@dimen/margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" >
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        >
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/fragment_ingredients"/>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
