@@ -1,5 +1,7 @@
 package com.geetha.capstoneproject.network;
 
+import com.geetha.capstoneproject.Constants;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -7,8 +9,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitInstance {
 
-    private static final String BASE_URL =
-            "https://d17h27t6h515a5.cloudfront.net/topher/2017/May/59121517_baking/";
 
     public static RecipeService get() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
@@ -18,7 +18,7 @@ public class RetrofitInstance {
         httpClient.addInterceptor(logging);
 
         Retrofit retrofit = new Retrofit.Builder ()
-                .baseUrl (BASE_URL)
+                .baseUrl (Constants.RECIPE_API_BASE_URL)
                 .addConverterFactory (GsonConverterFactory.create ())
                 .client (httpClient.build ())
                 .build ();

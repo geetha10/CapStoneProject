@@ -11,7 +11,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/homeFragment_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         />
 
      <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/welcome_note_ll"
+         android:id="@+id/cusine_rv"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_margin="@dimen/margin"
@@ -30,7 +30,7 @@
          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
          app:layout_constraintEnd_toEndOf="parent"
          app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/toolbar"
+         app:layout_constraintTop_toBottomOf="@+id/homeFragment_toolbar"
          tools:listitem="@layout/item_cuisine">
 
 
@@ -45,7 +45,7 @@
          android:textSize="@dimen/font_size_heading"
          android:textStyle="bold"
          app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/welcome_note_ll" />
+         app:layout_constraintTop_toBottomOf="@+id/cusine_rv" />
 
 
      <Button
@@ -63,7 +63,7 @@
          app:layout_constraintTop_toTopOf="@+id/selected_recipes_tv" />
 
      <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/recipes_rv"
+         android:id="@+id/selectedRecipes_rv"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:orientation="horizontal"
@@ -71,7 +71,7 @@
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toBottomOf="@+id/selected_recipes_tv"
          app:layout_constraintVertical_bias="1.0"
-         tools:listitem="@layout/item_recipe" />
+         tools:listitem="@layout/item_recipe_card" />
 
      <TextView
          android:id="@+id/fav_recipes_tv"
@@ -83,7 +83,7 @@
          android:textSize="@dimen/font_size_heading"
          android:textStyle="bold"
          app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/recipes_rv" />
+         app:layout_constraintTop_toBottomOf="@+id/selectedRecipes_rv" />
 
      <Button
          android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
          app:layout_constraintTop_toTopOf="@+id/fav_recipes_tv" />
 
      <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/fav_recipes_rv"
+         android:id="@+id/favRecipes_rv"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:orientation="horizontal"
