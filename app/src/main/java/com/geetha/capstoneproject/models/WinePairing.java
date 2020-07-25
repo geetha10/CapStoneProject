@@ -3,17 +3,20 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class WinePairing {
 
     @SerializedName("pairedWines")
     @Expose
-    private List<String> pairedWines = null;
+    public List<String> pairedWines = null;
     @SerializedName("pairingText")
     @Expose
-    private String pairingText;
+    public String pairingText;
     @SerializedName("productMatches")
     @Expose
-    private List<ProductMatch> productMatches = null;
+    public List<ProductMatch> productMatches = null;
 
     public List<String> getPairedWines() {
         return pairedWines;

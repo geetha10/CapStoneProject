@@ -3,14 +3,17 @@ package com.geetha.capstoneproject.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Length {
 
     @SerializedName("number")
     @Expose
-    private Integer number;
+    public Integer number;
     @SerializedName("unit")
     @Expose
-    private String unit;
+    public String unit;
 
     public Integer getNumber() {
         return number;

@@ -19,14 +19,18 @@ import java.util.List;
 
 public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesViewHolder> {
 
+    public interface RecipeClickCallback {
+        void onRecipeCardClicked(Recipe recipe);
+    }
+
     Context context;
     List <Recipe> mRecipeList;
+    RecipeClickCallback callback;
 
-
-    public RecipesAdapter(Context context, List <Recipe> mRecipeList) {
+    public RecipesAdapter(Context context, List <Recipe> mRecipeList, RecipeClickCallback callback) {
         this.mRecipeList = mRecipeList;
         this.context=context;
-
+        this.callback = callback;
     }
 
     @NonNull
@@ -37,11 +41,16 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipesV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecipesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecipesViewHolder holder, final int position) {
         Recipe recipe = mRecipeList.get (position);
         Glide.with (context).load (recipe.getImage ()).into (holder.mRecipeImg);
         holder.mRecipeName.setText (recipe.getTitle ());
-
+        holder.mRecipeCard.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                callback.onRecipeCardClicked (mRecipeList.get (position));
+            }
+        });
     }
 
     @Override

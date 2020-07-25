@@ -4,23 +4,26 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Step {
 
     @SerializedName("number")
     @Expose
-    private Integer number;
+    public Integer number;
     @SerializedName("step")
     @Expose
-    private String step;
+    public String step;
     @SerializedName("ingredients")
     @Expose
-    private List<Ingredient> ingredients = null;
+    public List<Ingredient> ingredients = null;
     @SerializedName("equipment")
     @Expose
-    private List<Equipment> equipment = null;
+    public List<Equipment> equipment = null;
     @SerializedName("length")
     @Expose
-    private Length length;
+    public Length length;
 
     public Integer getNumber() {
         return number;

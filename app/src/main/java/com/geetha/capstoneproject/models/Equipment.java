@@ -3,21 +3,23 @@ package com.geetha.capstoneproject.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
 
+@Parcel
 public class Equipment {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    public Integer id;
     @SerializedName("name")
     @Expose
-    private String name;
+    public String name;
     @SerializedName("localizedName")
     @Expose
-    private String localizedName;
+    public String localizedName;
     @SerializedName("image")
     @Expose
-    private String image;
+    public String image;
 
     public Integer getId() {
         return id;

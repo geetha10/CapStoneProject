@@ -4,107 +4,110 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Recipe {
 
     @SerializedName("vegetarian")
     @Expose
-    private Boolean vegetarian;
+    public Boolean vegetarian;
     @SerializedName("vegan")
     @Expose
-    private Boolean vegan;
+    public Boolean vegan;
     @SerializedName("glutenFree")
     @Expose
-    private Boolean glutenFree;
+    public Boolean glutenFree;
     @SerializedName("dairyFree")
     @Expose
-    private Boolean dairyFree;
+    public Boolean dairyFree;
     @SerializedName("veryHealthy")
     @Expose
-    private Boolean veryHealthy;
+    public Boolean veryHealthy;
     @SerializedName("cheap")
     @Expose
-    private Boolean cheap;
+    public Boolean cheap;
     @SerializedName("veryPopular")
     @Expose
-    private Boolean veryPopular;
+    public Boolean veryPopular;
     @SerializedName("sustainable")
     @Expose
-    private Boolean sustainable;
+    public Boolean sustainable;
     @SerializedName("weightWatcherSmartPoints")
     @Expose
-    private Integer weightWatcherSmartPoints;
+    public Integer weightWatcherSmartPoints;
     @SerializedName("gaps")
     @Expose
-    private String gaps;
+    public String gaps;
     @SerializedName("lowFodmap")
     @Expose
-    private Boolean lowFodmap;
+    public Boolean lowFodmap;
     @SerializedName("preparationMinutes")
     @Expose
-    private Integer preparationMinutes;
+    public Integer preparationMinutes;
     @SerializedName("cookingMinutes")
     @Expose
-    private Integer cookingMinutes;
+    public Integer cookingMinutes;
     @SerializedName("aggregateLikes")
     @Expose
-    private Integer aggregateLikes;
+    public Integer aggregateLikes;
     @SerializedName("spoonacularScore")
     @Expose
-    private Integer spoonacularScore;
+    public Integer spoonacularScore;
     @SerializedName("healthScore")
     @Expose
-    private Integer healthScore;
+    public Integer healthScore;
     @SerializedName("creditsText")
     @Expose
-    private String creditsText;
+    public String creditsText;
     @SerializedName("sourceName")
     @Expose
-    private String sourceName;
+    public String sourceName;
     @SerializedName("pricePerServing")
     @Expose
-    private Double pricePerServing;
+    public Double pricePerServing;
     @SerializedName("id")
     @Expose
-    private Integer id;
+    public Integer id;
     @SerializedName("title")
     @Expose
-    private String title;
+    public String title;
     @SerializedName("readyInMinutes")
     @Expose
-    private Integer readyInMinutes;
+    public Integer readyInMinutes;
     @SerializedName("servings")
     @Expose
-    private Integer servings;
+    public Integer servings;
     @SerializedName("sourceUrl")
     @Expose
-    private String sourceUrl;
+    public String sourceUrl;
     @SerializedName("image")
     @Expose
-    private String image;
+    public String image;
     @SerializedName("imageType")
     @Expose
-    private String imageType;
+    public String imageType;
     @SerializedName("summary")
     @Expose
-    private String summary;
+    public String summary;
     @SerializedName("cuisines")
     @Expose
-    private List<String> cuisines = null;
+    public List<String> cuisines = null;
     @SerializedName("dishTypes")
     @Expose
-    private List<String> dishTypes = null;
+    public List<String> dishTypes = null;
     @SerializedName("diets")
     @Expose
-    private List<String> diets = null;
-    @SerializedName("occasions")
+    public List<String> diets = null;
+    /*@SerializedName("occasions")
     @Expose
-    private List<Object> occasions = null;
+    private List<Object> occasions = null;*/
     @SerializedName("winePairing")
     @Expose
-    private WinePairing winePairing;
+    public WinePairing winePairing;
     @SerializedName("analyzedInstructions")
     @Expose
-    private List<AnalyzedInstruction> analyzedInstructions = null;
+    public List<AnalyzedInstruction> analyzedInstructions = null;
 
     public Boolean getVegetarian() {
         return vegetarian;
@@ -346,13 +349,13 @@ public class Recipe {
         this.diets = diets;
     }
 
-    public List<Object> getOccasions() {
+    /*public List<Object> getOccasions() {
         return occasions;
     }
 
     public void setOccasions(List<Object> occasions) {
         this.occasions = occasions;
-    }
+    }*/
 
     public WinePairing getWinePairing() {
         return winePairing;

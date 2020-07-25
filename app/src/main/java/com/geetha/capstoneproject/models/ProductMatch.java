@@ -2,35 +2,38 @@ package com.geetha.capstoneproject.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class ProductMatch {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    public Integer id;
     @SerializedName("title")
     @Expose
-    private String title;
+    public String title;
     @SerializedName("description")
     @Expose
-    private String description;
+    public String description;
     @SerializedName("price")
     @Expose
-    private String price;
+    public String price;
     @SerializedName("imageUrl")
     @Expose
-    private String imageUrl;
+    public String imageUrl;
     @SerializedName("averageRating")
     @Expose
-    private Double averageRating;
+    public Double averageRating;
     @SerializedName("ratingCount")
     @Expose
-    private Integer ratingCount;
+    public Integer ratingCount;
     @SerializedName("score")
     @Expose
-    private Double score;
+    public Double score;
     @SerializedName("link")
     @Expose
-    private String link;
+    public String link;
 
     public Integer getId() {
         return id;
