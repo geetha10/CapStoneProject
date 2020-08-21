@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment implements RecipesAdapter.RecipeClick
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-       homeViewModel = new ViewModelProvider (this).get (HomeViewModel.class);
+       //homeViewModel = new ViewModelProvider (this).get (HomeViewModel.class);
        return inflater.inflate (R.layout.fragment_home, container, false);
     }
 
@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment implements RecipesAdapter.RecipeClick
         mCuisineRV = view.findViewById (R.id.cusine_rv);
         mSelectedRecipesRV=view.findViewById (R.id.selectedRecipes_rv);
         mFavoriteRecipesRV=view.findViewById (R.id.favRecipes_rv);
-        HomeViewModel homeViewModel=new ViewModelProvider (this).get(HomeViewModel.class);
+        homeViewModel = new ViewModelProvider (this).get(HomeViewModel.class);
         homeFragmentToolbar = view.findViewById (R.id.homeFragment_toolbar);
         homeViewModel.getRecipesAsync ();
         homeViewModel.recipeLiveData.observe (getViewLifecycleOwner (),recipeObserver);
@@ -75,6 +75,7 @@ public class HomeFragment extends Fragment implements RecipesAdapter.RecipeClick
         cuisinesAdapter = new CuisinesAdapter (getContext (),mRecipeList);
         mSelectedRecipesRV.setAdapter (selectedRecipesAdapter);
         mFavoriteRecipesRV.setAdapter (favRecipesAdapter);
+        mCuisineRV.setAdapter (cuisinesAdapter);
     }
 
     void onRecipesFetched(List <Recipe> recipes) {

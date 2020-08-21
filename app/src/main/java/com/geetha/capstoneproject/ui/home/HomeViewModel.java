@@ -38,6 +38,7 @@ public class HomeViewModel extends ViewModel {
             @Override
             public void onResponse(Call < RecipeSearchResult > call, Response <RecipeSearchResult> response) {
                 _recipesLiveData.setValue (response.body ().getRecipes ());
+
             }
 
             @Override
